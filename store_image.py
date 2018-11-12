@@ -105,6 +105,7 @@ def save_image_to_db(file_param) -> None:
         update_image(conn, file_param)
     else:
         add_image(conn, file_param)
+    conn.close()
 
 
 def main() -> str:
